@@ -1,0 +1,287 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<link rel="stylesheet" href="stylesheet.css" type="text/css"/>
+	</head>
+<body>
+<div id="container">
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div>
+<div id="main">
+	<div id="navigation">
+		<h2>Modules</h2>
+			<ul><li>
+				<a href="index.html">index</a>
+			</li></ul>
+		<ul>
+					<li><a href="coroutine.html">coroutine</a></li>
+					<li><a href="debug.html">debug</a></li>
+					<li><a href="global.html">global</a></li>
+					<li><a href="io.html">io</a></li>
+					<li><a href="math.html">math</a></li>
+					<li><a href="os.html">os</a></li>
+					<li>package</li>
+					<li><a href="string.html">string</a></li>
+					<li><a href="table.html">table</a></li>
+		</ul>
+	</div>
+	<div id="content">
+   <h1>Module <code>package</code></h1>
+   
+<p>The package library provides basic facilities for loading and building modules in Lua.</p>
+
+   
+<p>It exports two of its functions directly in the global environment 
+require and module. Everything else is exported in a table package.</p>
+
+	<h2><a id="#(package)" >Type <code>package</code></a></h2>
+		<table class="function_list">
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(package).cpath">package.cpath</a></td>
+		<td class="summary">
+<p>The path used by <code>require</code> to search for a C loader.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(package).loaded">package.loaded</a></td>
+		<td class="summary">
+<p>A table used by <code>require</code> to control which modules are already
+loaded.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(package).loaders">package.loaders</a></td>
+		<td class="summary">
+<p>A table used by <code>require</code> to control how to load modules.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(package).loadlib">package.loadlib(libname, funcname)</a></td>
+		<td class="summary">
+<p>Dynamically links the host program with the C library <code>libname</code>.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(package).path">package.path</a></td>
+		<td class="summary">
+<p>The path used by <code>require</code> to search for a Lua loader.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(package).preload">package.preload</a></td>
+		<td class="summary">
+<p>A table to store loaders for specific modules (see <code>require</code>).</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(package).seeall">package.seeall()</a></td>
+		<td class="summary">
+<p>Sets a metatable for <code>module</code> with its <code>__index</code> field referring to the
+global environment, so that this module inherits values from the global
+environment.</p>
+</td>
+		</tr>
+	</table>
+
+	<h2><a id="#(package)" >Type <code>package</code></a></h2>
+		<h3>Field(s)</h3>
+		<dl class="function">
+<dt>
+		<em>#string</em>
+<a id="#(package).cpath" >
+<strong>package.cpath</strong>
+</a>
+</dt>
+<dd>
+	
+<p>The path used by <code>require</code> to search for a C loader.</p>
+
+	
+<p>Lua initializes the C path <code>package.cpath</code> in the same way it initializes
+the Lua path <code>package.path</code>, using the environment variable <code>LUA_CPATH</code>
+or a default path defined in <code>luaconf.h</code>.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em>#table</em>
+<a id="#(package).loaded" >
+<strong>package.loaded</strong>
+</a>
+</dt>
+<dd>
+	
+<p>A table used by <code>require</code> to control which modules are already
+loaded.</p>
+
+	
+<p>When you require a module <code>modname</code> and <code>package.loaded[modname]</code>
+is not false, <code>require</code> simply returns the value stored there.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em>#table</em>
+<a id="#(package).loaders" >
+<strong>package.loaders</strong>
+</a>
+</dt>
+<dd>
+	
+<p>A table used by <code>require</code> to control how to load modules.</p>
+
+	
+<p>Each entry in this table is a <em>searcher function</em>. When looking for a module,
+<code>require</code> calls each of these searchers in ascending order, with the module
+name (the argument given to <code>require</code>) as its sole parameter. The function
+can return another function (the module <em>loader</em>) or a string explaining
+why it did not find that module (or nil if it has nothing to say). Lua
+initializes this table with four functions.  </p>
+
+<p>The first searcher simply looks for a loader in the <code>package.preload</code> table.</p>
+
+<p>The second searcher looks for a loader as a Lua library, using the path
+stored at <code>package.path</code>. A path is a sequence of <em>templates</em> separated by
+semicolons. For each template, the searcher will change each interrogation
+mark in the template by <code>filename</code>, which is the module name with each dot
+replaced by a "directory separator" (such as "<code>/</code>" in Unix); then it will
+try to open the resulting file name. So, for instance, if the Lua path is
+the string</p>
+
+<pre><code>"./?.lua;./?.lc;/usr/local/?/init.lua"
+</code></pre>
+<p>the search for a Lua file for module <code>foo</code> will try to open the files
+<code>./foo.lua</code>, <code>./foo.lc</code>, and <code>/usr/local/foo/init.lua</code>, in that order.  </p>
+
+<p>The third searcher looks for a loader as a C library, using the path given
+by the variable <code>package.cpath</code>. For instance, if the C path is the string</p>
+
+<pre><code>"./?.so;./?.dll;/usr/local/?/init.so"
+</code></pre>
+<p>the searcher for module <code>foo</code> will try to open the files <code>./foo.so</code>,
+<code>./foo.dll</code>, and <code>/usr/local/foo/init.so</code>, in that order. Once it finds
+a C library, this searcher first uses a dynamic link facility to link the
+application with the library. Then it tries to find a C function inside the
+library to be used as the loader. The name of this C function is the string
+"<code>luaopen_</code>" concatenated with a copy of the module name where each dot
+is replaced by an underscore. Moreover, if the module name has a hyphen,
+its prefix up to (and including) the first hyphen is removed. For instance,
+if the module name is <code>a.v1-b.c</code>, the function name will be <code>luaopen_b_c</code>.  </p>
+
+<p>The fourth searcher tries an <em>all-in-one loader</em>. It searches the C
+path for a library for the root name of the given module. For instance,
+when requiring <code>a.b.c</code>, it will search for a C library for <code>a</code>. If found,
+it looks into it for an open function for the submodule; in our example,
+that would be <code>luaopen_a_b_c</code>. With this facility, a package can pack
+several C submodules into one single library, with each submodule keeping
+its original open function.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(package).loadlib" >
+<strong>package.loadlib(libname, funcname)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Dynamically links the host program with the C library <code>libname</code>.</p>
+
+	
+<p>Inside this library, looks for a function <code>funcname</code> and returns this 
+function as a C function.
+(So, <code>funcname</code> must follow the protocol (see <code>lua_CFunction</code>)).</p>
+
+<p>This is a low-level function. It completely bypasses the package and module
+system. Unlike <code>require</code>, it does not perform any path searching and does
+not automatically adds extensions. <code>libname</code> must be the complete file name
+of the C library, including if necessary a path and extension. <code>funcname</code>
+must be the exact name exported by the C library (which may depend on the
+C compiler and linker used).  </p>
+
+<p>This function is not supported by ANSI C. As such, it is only available
+on some platforms (Windows, Linux, Mac OS X, Solaris, BSD, plus other Unix
+systems that support the <code>dlfcn</code> standard).</p>
+
+		<h3>Parameters</h3>
+		<ul>
+				<li>
+				
+<p><code><em>#string libname </em></code>: 
+the complete file name of the C library.</p>
+
+				</li>
+				<li>
+				
+<p><code><em>#string funcname </em></code>: 
+the name of a function defined in the C library named <code>libname</code>.</p>
+
+
+				</li>
+		</ul>
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em>#string</em>
+<a id="#(package).path" >
+<strong>package.path</strong>
+</a>
+</dt>
+<dd>
+	
+<p>The path used by <code>require</code> to search for a Lua loader.</p>
+
+	
+<p>At start-up, Lua initializes this variable with the value of the environment
+variable <code>LUA_PATH</code> or with a default path defined in <code>luaconf.h</code>, if
+the environment variable is not defined. Any "<code>;;</code>" in the value of the
+environment variable is replaced by the default path.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em>#table</em>
+<a id="#(package).preload" >
+<strong>package.preload</strong>
+</a>
+</dt>
+<dd>
+	
+<p>A table to store loaders for specific modules (see <code>require</code>).</p>
+
+	
+<p>function package.preload end</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(package).seeall" >
+<strong>package.seeall()</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Sets a metatable for <code>module</code> with its <code>__index</code> field referring to the
+global environment, so that this module inherits values from the global
+environment.</p>
+
+	
+<p>To be used as an option to function <code>module</code>.</p>
+
+</dd>
+</dl>
+
+</div>
+
+</div>
+</body>
+</html>

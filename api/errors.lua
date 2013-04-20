@@ -1,0 +1,4 @@
+-- @module errors
+
+-----------------------
+return nil

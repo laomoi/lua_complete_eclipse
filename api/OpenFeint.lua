@@ -1,0 +1,4 @@
+-- @module OpenFeint
+
+-----------------------
+return nil

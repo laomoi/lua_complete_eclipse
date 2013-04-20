@@ -1,0 +1,1018 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<link rel="stylesheet" href="stylesheet.css" type="text/css"/>
+	</head>
+<body>
+<div id="container">
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div>
+<div id="main">
+	<div id="navigation">
+		<h2>Modules</h2>
+			<ul><li>
+				<a href="index.html">index</a>
+			</li></ul>
+		<ul>
+					<li><a href="coroutine.html">coroutine</a></li>
+					<li><a href="debug.html">debug</a></li>
+					<li><a href="global.html">global</a></li>
+					<li><a href="io.html">io</a></li>
+					<li>math</li>
+					<li><a href="os.html">os</a></li>
+					<li><a href="package.html">package</a></li>
+					<li><a href="string.html">string</a></li>
+					<li><a href="table.html">table</a></li>
+		</ul>
+	</div>
+	<div id="content">
+   <h1>Module <code>math</code></h1>
+   
+<p>Mathematical Functions.</p>
+
+   
+<p>This library is an interface to the standard C math library.
+It provides all its functions inside the table math.</p>
+
+	<h2><a id="#(math)" >Type <code>math</code></a></h2>
+		<table class="function_list">
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(math).abs">math.abs(x)</a></td>
+		<td class="summary">
+<p>Returns the absolute value of <code>x</code>.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(math).acos">math.acos(x)</a></td>
+		<td class="summary">
+<p>Returns the arc cosine of <code>x</code> (in radians).</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(math).asin">math.asin(x)</a></td>
+		<td class="summary">
+<p>Returns the arc sine of <code>x</code> (in radians).</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(math).atan">math.atan(x)</a></td>
+		<td class="summary">
+<p>Returns the arc tangent of <code>x</code> (in radians).</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(math).atan2">math.atan2(y, x)</a></td>
+		<td class="summary">
+<p>Returns the arc tangent of <code>y/x</code> (in radians), but uses the signs
+of both parameters to find the quadrant of the result.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(math).ceil">math.ceil(x)</a></td>
+		<td class="summary">
+<p>Returns the smallest integer larger than or equal to <code>x</code>.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(math).cos">math.cos(x)</a></td>
+		<td class="summary">
+<p>Returns the cosine of <code>x</code> (assumed to be in radians).</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(math).cosh">math.cosh(x)</a></td>
+		<td class="summary">
+<p>Returns the hyperbolic cosine of <code>x</code>.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(math).deg">math.deg(x)</a></td>
+		<td class="summary">
+<p>Returns the angle <code>x</code> (given in radians) in degrees.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(math).exp">math.exp(x)</a></td>
+		<td class="summary">
+<p>Returns the value <em>e^x</em>.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(math).floor">math.floor(x)</a></td>
+		<td class="summary">
+<p>Returns the largest integer smaller than or equal to <code>x</code>.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(math).fmod">math.fmod(x, y)</a></td>
+		<td class="summary">
+<p>Returns the remainder of the division of <code>x</code> by <code>y</code> that rounds the
+quotient towards zero.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(math).frexp">math.frexp(x)</a></td>
+		<td class="summary">
+<p>Returns <code>m</code> and <code>e</code> such that <em>x = m2^e</em>, <code>e</code> is an integer and the
+absolute value of <code>m</code> is in the range <em>[0.5, 1)</em> (or zero when <code>x</code> is zero).</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(math).huge">math.huge</a></td>
+		<td class="summary">
+<p>The value <code>HUGE_VAL</code>, a value larger than or equal to any other
+numerical value.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(math).ldexp">math.ldexp(m, e)</a></td>
+		<td class="summary">
+<p>Returns <em>m2^e</em> (<code>e</code> should be an integer).</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(math).log">math.log(x)</a></td>
+		<td class="summary">
+<p>Returns the natural logarithm of <code>x</code>.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(math).log10">math.log10(x)</a></td>
+		<td class="summary">
+<p>Returns the base-10 logarithm of <code>x</code>.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(math).max">math.max(x)</a></td>
+		<td class="summary">
+<p>Returns the maximum value among its arguments.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(math).min">math.min(x)</a></td>
+		<td class="summary">
+<p>Returns the minimum value among its arguments.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(math).modf">math.modf(x)</a></td>
+		<td class="summary">
+<p>Returns two numbers, the integral part of <code>x</code> and the fractional part of
+<code>x</code>.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(math).pi">math.pi</a></td>
+		<td class="summary">
+<p>The value of <em>pi</em>.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(math).pow">math.pow(x, y)</a></td>
+		<td class="summary">
+<p>Returns <em>x^y</em>.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(math).rad">math.rad(x)</a></td>
+		<td class="summary">
+<p>Returns the angle <code>x</code> (given in degrees) in radians.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(math).random">math.random(m, n)</a></td>
+		<td class="summary">
+<p>This function is an interface to the simple pseudo-random generator
+function <code>rand</code> provided by ANSI C.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(math).randomseed">math.randomseed(x)</a></td>
+		<td class="summary">
+<p>Sets <code>x</code> as the "seed" for the pseudo-random generator: equal seeds
+produce equal sequences of numbers.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(math).sin">math.sin(x)</a></td>
+		<td class="summary">
+<p>Returns the sine of <code>x</code> (assumed to be in radians).</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(math).sinh">math.sinh(x)</a></td>
+		<td class="summary">
+<p>Returns the hyperbolic sine of <code>x</code>.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(math).sqrt">math.sqrt(x)</a></td>
+		<td class="summary">
+<p>Returns the square root of <code>x</code>.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(math).tan">math.tan(x)</a></td>
+		<td class="summary">
+<p>Returns the tangent of <code>x</code> (assumed to be in radians).</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(math).tanh">math.tanh(x)</a></td>
+		<td class="summary">
+<p>Returns the hyperbolic tangent of <code>x</code>.</p>
+</td>
+		</tr>
+	</table>
+
+	<h2><a id="#(math)" >Type <code>math</code></a></h2>
+		<h3>Field(s)</h3>
+		<dl class="function">
+<dt>
+<a id="#(math).abs" >
+<strong>math.abs(x)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Returns the absolute value of <code>x</code>.</p>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em>#number x </em></code>: </p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+<p><em>#number:</em></p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(math).acos" >
+<strong>math.acos(x)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Returns the arc cosine of <code>x</code> (in radians).</p>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em>#number x </em></code>: </p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+<p><em>#number:</em></p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(math).asin" >
+<strong>math.asin(x)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Returns the arc sine of <code>x</code> (in radians).</p>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em>#number x </em></code>: </p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+<p><em>#number:</em></p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(math).atan" >
+<strong>math.atan(x)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Returns the arc tangent of <code>x</code> (in radians).</p>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em>#number x </em></code>: </p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+<p><em>#number:</em></p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(math).atan2" >
+<strong>math.atan2(y, x)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Returns the arc tangent of <code>y/x</code> (in radians), but uses the signs
+of both parameters to find the quadrant of the result.</p>
+
+	
+<p>(It also handles
+correctly the case of <code>x</code> being zero.)</p>
+
+		<h3>Parameters</h3>
+		<ul>
+				<li>
+				
+<p><code><em>#number y </em></code>: </p>
+
+				</li>
+				<li>
+				
+<p><code><em>#number x </em></code>: </p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+<p><em>#number:</em></p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(math).ceil" >
+<strong>math.ceil(x)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Returns the smallest integer larger than or equal to <code>x</code>.</p>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em>#number x </em></code>: </p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+<p><em>#number:</em></p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(math).cos" >
+<strong>math.cos(x)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Returns the cosine of <code>x</code> (assumed to be in radians).</p>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em>#number x </em></code>: </p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+<p><em>#number:</em></p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(math).cosh" >
+<strong>math.cosh(x)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Returns the hyperbolic cosine of <code>x</code>.</p>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em>#number x </em></code>: </p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+<p><em>#number:</em></p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(math).deg" >
+<strong>math.deg(x)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Returns the angle <code>x</code> (given in radians) in degrees.</p>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em>#number x </em></code>: </p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+<p><em>#number:</em></p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(math).exp" >
+<strong>math.exp(x)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Returns the value <em>e^x</em>.</p>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em>#number x </em></code>: </p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+<p><em>#number:</em></p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(math).floor" >
+<strong>math.floor(x)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Returns the largest integer smaller than or equal to <code>x</code>.</p>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em>#number x </em></code>: </p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+<p><em>#number:</em></p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(math).fmod" >
+<strong>math.fmod(x, y)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Returns the remainder of the division of <code>x</code> by <code>y</code> that rounds the
+quotient towards zero.</p>
+
+		<h3>Parameters</h3>
+		<ul>
+				<li>
+				
+<p><code><em>#number x </em></code>: </p>
+
+				</li>
+				<li>
+				
+<p><code><em>#number y </em></code>: </p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+<p><em>#number:</em></p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(math).frexp" >
+<strong>math.frexp(x)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Returns <code>m</code> and <code>e</code> such that <em>x = m2^e</em>, <code>e</code> is an integer and the
+absolute value of <code>m</code> is in the range <em>[0.5, 1)</em> (or zero when <code>x</code> is zero).</p>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em>#number x </em></code>: </p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+<p><em>#number:</em></p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em>#number</em>
+<a id="#(math).huge" >
+<strong>math.huge</strong>
+</a>
+</dt>
+<dd>
+	
+<p>The value <code>HUGE_VAL</code>, a value larger than or equal to any other
+numerical value.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(math).ldexp" >
+<strong>math.ldexp(m, e)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Returns <em>m2^e</em> (<code>e</code> should be an integer).</p>
+
+		<h3>Parameters</h3>
+		<ul>
+				<li>
+				
+<p><code><em>#number m </em></code>: </p>
+
+				</li>
+				<li>
+				
+<p><code><em>#number e </em></code>: </p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+<p><em>#number:</em></p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(math).log" >
+<strong>math.log(x)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Returns the natural logarithm of <code>x</code>.</p>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em>#number x </em></code>: </p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+<p><em>#number:</em></p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(math).log10" >
+<strong>math.log10(x)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Returns the base-10 logarithm of <code>x</code>.</p>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em>#number x </em></code>: </p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+<p><em>#number:</em></p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(math).max" >
+<strong>math.max(x)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Returns the maximum value among its arguments.</p>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em>#number x </em></code>: </p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+<p><em>#number:</em></p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(math).min" >
+<strong>math.min(x)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Returns the minimum value among its arguments.</p>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em>#number x </em></code>: </p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+<p><em>#number:</em></p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(math).modf" >
+<strong>math.modf(x)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Returns two numbers, the integral part of <code>x</code> and the fractional part of
+<code>x</code>.</p>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em>#number x </em></code>: </p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+<p><em>#number:</em></p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+		<em>#number</em>
+<a id="#(math).pi" >
+<strong>math.pi</strong>
+</a>
+</dt>
+<dd>
+	
+<p>The value of <em>pi</em>.</p>
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(math).pow" >
+<strong>math.pow(x, y)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Returns <em>x^y</em>.</p>
+
+	
+<p>(You can also use the expression <code>x^y</code> to compute this
+value.)</p>
+
+		<h3>Parameters</h3>
+		<ul>
+				<li>
+				
+<p><code><em>#number x </em></code>: </p>
+
+				</li>
+				<li>
+				
+<p><code><em>#number y </em></code>: </p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+<p><em>#number:</em></p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(math).rad" >
+<strong>math.rad(x)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Returns the angle <code>x</code> (given in degrees) in radians.</p>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em>#number x </em></code>: </p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+<p><em>#number:</em></p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(math).random" >
+<strong>math.random(m, n)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>This function is an interface to the simple pseudo-random generator
+function <code>rand</code> provided by ANSI C.</p>
+
+	
+<p>(No guarantees can be given for its
+statistical properties.)</p>
+
+<p>When called without arguments, returns a uniform pseudo-random real
+number in the range <em>[0,1)</em>. When called with an integer number <code>m</code>,
+<code>math.random</code> returns a uniform pseudo-random integer in the range <em>[1,
+m]</em>. When called with two integer numbers <code>m</code> and <code>n</code>, <code>math.random</code>
+returns a uniform pseudo-random integer in the range <em>[m, n]</em>.</p>
+
+		<h3>Parameters</h3>
+		<ul>
+				<li>
+				
+<p><code><em>#number m </em></code>: </p>
+
+				</li>
+				<li>
+				
+<p><code><em>#number n </em></code>: </p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+<p><em>#number:</em></p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(math).randomseed" >
+<strong>math.randomseed(x)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Sets <code>x</code> as the "seed" for the pseudo-random generator: equal seeds
+produce equal sequences of numbers.</p>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em>#number x </em></code>: </p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+<p><em>#number:</em></p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(math).sin" >
+<strong>math.sin(x)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Returns the sine of <code>x</code> (assumed to be in radians).</p>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em>#number x </em></code>: </p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+<p><em>#number:</em></p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(math).sinh" >
+<strong>math.sinh(x)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Returns the hyperbolic sine of <code>x</code>.</p>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em>#number x </em></code>: </p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+<p><em>#number:</em></p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(math).sqrt" >
+<strong>math.sqrt(x)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Returns the square root of <code>x</code>.</p>
+
+	
+<p>(You can also use the expression <code>x^0.5</code>
+to compute this value.)</p>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em>#number x </em></code>: </p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+<p><em>#number:</em></p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(math).tan" >
+<strong>math.tan(x)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Returns the tangent of <code>x</code> (assumed to be in radians).</p>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em>#number x </em></code>: </p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+<p><em>#number:</em></p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(math).tanh" >
+<strong>math.tanh(x)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Returns the hyperbolic tangent of <code>x</code>.</p>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em>#number x </em></code>: </p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+<p><em>#number:</em></p>
+
+
+</dd>
+</dl>
+
+</div>
+
+</div>
+</body>
+</html>

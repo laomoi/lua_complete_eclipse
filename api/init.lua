@@ -1,0 +1,4 @@
+-- @module init
+
+-----------------------
+return nil

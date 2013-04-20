@@ -1,0 +1,287 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<link rel="stylesheet" href="stylesheet.css" type="text/css"/>
+	</head>
+<body>
+<div id="container">
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div>
+<div id="main">
+	<div id="navigation">
+		<h2>Modules</h2>
+			<ul><li>
+				<a href="index.html">index</a>
+			</li></ul>
+		<ul>
+					<li><a href="coroutine.html">coroutine</a></li>
+					<li><a href="debug.html">debug</a></li>
+					<li><a href="global.html">global</a></li>
+					<li><a href="io.html">io</a></li>
+					<li><a href="math.html">math</a></li>
+					<li><a href="os.html">os</a></li>
+					<li><a href="package.html">package</a></li>
+					<li><a href="string.html">string</a></li>
+					<li>table</li>
+		</ul>
+	</div>
+	<div id="content">
+   <h1>Module <code>table</code></h1>
+   
+<p>Table Manipulation
+This library provides generic functions for table manipulation.</p>
+
+   
+<p>It provides all its functions inside the table table.</p>
+
+<p>Most functions in the table library assume that the table represents an array or a list.
+For these functions, when we talk about the "length" of a table we mean the result of the length operator.</p>
+
+	<h2><a id="#(table)" >Type <code>table</code></a></h2>
+		<table class="function_list">
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(table).concat">table.concat(table, sep, i, j)</a></td>
+		<td class="summary">
+<p>Given an array where all elements are strings or numbers, returns
+<code>table[i]..sep..table[i+1]...sep..table[j]</code>.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(table).insert">table.insert(table, pos, value)</a></td>
+		<td class="summary">
+<p>Inserts element <code>value</code> at position <code>pos</code> in <code>table</code>, shifting up
+other elements to open space, if necessary.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(table).maxn">table.maxn(table)</a></td>
+		<td class="summary">
+<p>Returns the largest positive numerical index of the given table, or
+zero if the table has no positive numerical indices.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(table).remove">table.remove(table, pos)</a></td>
+		<td class="summary">
+<p>Removes from <code>table</code> the element at position <code>pos</code>, shifting down other
+elements to close the space, if necessary.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(table).sort">table.sort(table, comp)</a></td>
+		<td class="summary">
+<p>Sorts table elements in a given order,
+<em>in-place</em>, from <code>table[1]</code> to <code>table[n]</code>, where <code>n</code> is the length of the
+table.</p>
+</td>
+		</tr>
+	</table>
+
+	<h2><a id="#(table)" >Type <code>table</code></a></h2>
+		<h3>Field(s)</h3>
+		<dl class="function">
+<dt>
+<a id="#(table).concat" >
+<strong>table.concat(table, sep, i, j)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Given an array where all elements are strings or numbers, returns
+<code>table[i]..sep..table[i+1]...sep..table[j]</code>.</p>
+
+	
+<p>The default value for
+<code>sep</code> is the empty string, the default for <code>i</code> is 1, and the default for
+<code>j</code> is the length of the table. If <code>i</code> is greater than <code>j</code>, returns the
+empty string.</p>
+
+		<h3>Parameters</h3>
+		<ul>
+				<li>
+				
+<p><code><em>#table table </em></code>: 
+table to handle.</p>
+
+				</li>
+				<li>
+				
+<p><code><em>#string sep </em></code>: 
+the separator, default value is an empty string. </p>
+
+				</li>
+				<li>
+				
+<p><code><em>#number i </em></code>: 
+start index, default value is 1.</p>
+
+				</li>
+				<li>
+				
+<p><code><em>#number j </em></code>: 
+end index, default value is lenght of the table.</p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+<p><em>#string:</em>
+the concatenated table.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(table).insert" >
+<strong>table.insert(table, pos, value)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Inserts element <code>value</code> at position <code>pos</code> in <code>table</code>, shifting up
+other elements to open space, if necessary.</p>
+
+	
+<p>The default value for <code>pos</code> is
+<code>n+1</code>, where <code>n</code> is the length of the table, so that a call
+<code>table.insert(t,x)</code> inserts <code>x</code> at the end of table <code>t</code>.</p>
+
+		<h3>Parameters</h3>
+		<ul>
+				<li>
+				
+<p><code><em>#table table </em></code>: 
+table to modify.</p>
+
+				</li>
+				<li>
+				
+<p><code><em>#number pos </em></code>: 
+index of insertion.</p>
+
+				</li>
+				<li>
+				
+<p><code><em> value </em></code>: 
+value to insert.</p>
+
+
+				</li>
+		</ul>
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(table).maxn" >
+<strong>table.maxn(table)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Returns the largest positive numerical index of the given table, or
+zero if the table has no positive numerical indices.</p>
+
+	
+<p>(To do its job this
+function does a linear traversal of the whole table.)</p>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em>#table table </em></code>: 
+table to traverse.</p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+<p><em>#number:</em>
+the largest positive numerical index of the given table, or
+zero if the table has no positive numerical indices.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(table).remove" >
+<strong>table.remove(table, pos)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Removes from <code>table</code> the element at position <code>pos</code>, shifting down other
+elements to close the space, if necessary.</p>
+
+	
+<p>Returns the value of the removed
+element. The default value for <code>pos</code> is <code>n</code>, where <code>n</code> is the length of the
+table, so that a call <code>table.remove(t)</code> removes the last element of table
+<code>t</code>.</p>
+
+		<h3>Parameters</h3>
+		<ul>
+				<li>
+				
+<p><code><em>#table table </em></code>: 
+table to modify.</p>
+
+				</li>
+				<li>
+				
+<p><code><em>#number pos </em></code>: 
+index of deletion. (default value is the lenght of the table)</p>
+
+
+				</li>
+		</ul>
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(table).sort" >
+<strong>table.sort(table, comp)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Sorts table elements in a given order,
+<em>in-place</em>, from <code>table[1]</code> to <code>table[n]</code>, where <code>n</code> is the length of the
+table.</p>
+
+	
+<p>If <code>comp</code> is given, then it must be a function that receives two
+table elements, and returns true when the first is less than the second
+(so that <code>not comp(a[i+1],a[i])</code> will be true after the sort). Lua operator &lt; is used instead.</p>
+
+<p>The sort algorithm is not stable; that is, elements considered equal by the given order may have their relative positions changed by the sort.</p>
+
+		<h3>Parameters</h3>
+		<ul>
+				<li>
+				
+<p><code><em>#table table </em></code>: 
+table to sort.</p>
+
+				</li>
+				<li>
+				
+<p><code><em> comp </em></code>: 
+a function which take to table and returns true when the first is less than the second.</p>
+
+
+				</li>
+		</ul>
+</dd>
+</dl>
+
+</div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,303 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<link rel="stylesheet" href="stylesheet.css" type="text/css"/>
+	</head>
+<body>
+<div id="container">
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div>
+<div id="main">
+	<div id="navigation">
+		<h2>Modules</h2>
+			<ul><li>
+				<a href="index.html">index</a>
+			</li></ul>
+		<ul>
+					<li>coroutine</li>
+					<li><a href="debug.html">debug</a></li>
+					<li><a href="global.html">global</a></li>
+					<li><a href="io.html">io</a></li>
+					<li><a href="math.html">math</a></li>
+					<li><a href="os.html">os</a></li>
+					<li><a href="package.html">package</a></li>
+					<li><a href="string.html">string</a></li>
+					<li><a href="table.html">table</a></li>
+		</ul>
+	</div>
+	<div id="content">
+   <h1>Module <code>coroutine</code></h1>
+   
+<p>Coroutine Manipulation.</p>
+
+   
+<p>The operations related to coroutines comprise a sub-library of the basic library 
+and come inside the table coroutine.
+See http://www.lua.org/manual/5.1/manual.html#2.11 for a general description of coroutines.</p>
+
+	<h2><a id="#(coroutine)" >Type <code>coroutine</code></a></h2>
+		<table class="function_list">
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(coroutine).create">coroutine.create(f)</a></td>
+		<td class="summary">
+<p>Creates a new coroutine, with body <code>f</code>.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(coroutine).resume">coroutine.resume(co, ...)</a></td>
+		<td class="summary">
+<p>Starts or continues the execution of coroutine <code>co</code>.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(coroutine).running">coroutine.running()</a></td>
+		<td class="summary">
+<p>Returns the running coroutine, or nil when called by the main thread.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(coroutine).status">coroutine.status(co)</a></td>
+		<td class="summary">
+<p>Returns the status of coroutine <code>co</code>, as a string: <code>"running"</code>, if
+the coroutine is running (that is, it called <code>status</code>); <code>"suspended"</code>, if
+the coroutine is suspended in a call to <code>yield</code>, or if it has not started
+running yet; <code>"normal"</code> if the coroutine is active but not running (that
+is, it has resumed another coroutine); and <code>"dead"</code> if the coroutine has
+finished its body function, or if it has stopped with an error.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(coroutine).wrap">coroutine.wrap(f, ...)</a></td>
+		<td class="summary">
+<p>Creates a new coroutine, with body <code>f</code>.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(coroutine).yield">coroutine.yield(...)</a></td>
+		<td class="summary">
+<p>Suspends the execution of the calling coroutine.</p>
+</td>
+		</tr>
+	</table>
+
+	<h2><a id="#(coroutine)" >Type <code>coroutine</code></a></h2>
+		<h3>Field(s)</h3>
+		<dl class="function">
+<dt>
+<a id="#(coroutine).create" >
+<strong>coroutine.create(f)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Creates a new coroutine, with body <code>f</code>.</p>
+
+	
+<p><code>f</code> must be a Lua
+function. Returns this new coroutine, an object with type <code>"thread"</code>.</p>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em> f </em></code>: 
+a function used as coroutine body.  </p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+<p><em>#thread:</em>
+a new coroutine.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(coroutine).resume" >
+<strong>coroutine.resume(co, ...)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Starts or continues the execution of coroutine <code>co</code>.</p>
+
+	
+<p>The first time
+you resume a coroutine, it starts running its body. The values <code>val1</code>,
+... are passed as the arguments to the body function. If the coroutine
+has yielded, <code>resume</code> restarts it; the values <code>val1</code>, ... are passed
+as the results from the yield.</p>
+
+<p>If the coroutine runs without any errors, <code>resume</code> returns true plus any
+values passed to <code>yield</code> (if the coroutine yields) or any values returned
+by the body function (if the coroutine terminates). If there is any error,
+<code>resume</code> returns false plus the error message.</p>
+
+		<h3>Parameters</h3>
+		<ul>
+				<li>
+				
+<p><code><em>#thread co </em></code>: 
+coroutine to start or resume.</p>
+
+				</li>
+				<li>
+				
+<p><code><em> ... </em></code>: 
+arguments passed to the body function or as result of yield call.</p>
+
+				</li>
+		</ul>
+		<h3>Return values</h3>
+			<ol>
+				<li>
+				
+<p><em>#boolean:</em>
+true plus any values passed to <code>yield</code> (if the coroutine yields) or any values returned
+by the body function (if the coroutine terminates)</p>
+
+				</li>
+				<li>
+				
+<p><em>#boolean:</em>
+false plus an error message.</p>
+
+
+				</li>
+			</ol>
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(coroutine).running" >
+<strong>coroutine.running()</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Returns the running coroutine, or nil when called by the main thread.</p>
+
+		<h3>Return value</h3>
+				
+<p><em>#thread:</em>
+the running coroutine, or nil when called by the main thread.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(coroutine).status" >
+<strong>coroutine.status(co)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Returns the status of coroutine <code>co</code>, as a string: <code>"running"</code>, if
+the coroutine is running (that is, it called <code>status</code>); <code>"suspended"</code>, if
+the coroutine is suspended in a call to <code>yield</code>, or if it has not started
+running yet; <code>"normal"</code> if the coroutine is active but not running (that
+is, it has resumed another coroutine); and <code>"dead"</code> if the coroutine has
+finished its body function, or if it has stopped with an error.</p>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em>#thread co </em></code>: 
+a coroutine</p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+<p><em>#string:</em>
+the status : <code>"running"</code>, <code>"suspended"</code>, <code>"normal"</code> or <code>"dead"</code>.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(coroutine).wrap" >
+<strong>coroutine.wrap(f, ...)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Creates a new coroutine, with body <code>f</code>.</p>
+
+	
+<p><code>f</code> must be a Lua
+function. Returns a function that resumes the coroutine each time it is
+called. Any arguments passed to the function behave as the extra arguments to
+<code>resume</code>. Returns the same values returned by <code>resume</code>, except the first
+boolean. In case of error, propagates the error.</p>
+
+		<h3>Parameters</h3>
+		<ul>
+				<li>
+				
+<p><code><em> f </em></code>: 
+a function used as coroutine body. </p>
+
+				</li>
+				<li>
+				
+<p><code><em> ... </em></code>: 
+arguments passed to the body function or as result of yield call.</p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+
+<p>Any values passed to <code>yield</code> (if the coroutine yields) or any values returned
+by the body function (if the coroutine terminates).</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(coroutine).yield" >
+<strong>coroutine.yield(...)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Suspends the execution of the calling coroutine.</p>
+
+	
+<p>The coroutine cannot
+be running a C function, a metamethod, or an iterator. Any arguments to
+<code>yield</code> are passed as extra results to <code>resume</code>.</p>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em> ... </em></code>: 
+arguments passed as extra results to <code>resume</code> function.</p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+
+<p>Any values passed to the <code>resume</code> function.</p>
+
+
+</dd>
+</dl>
+
+</div>
+
+</div>
+</body>
+</html>

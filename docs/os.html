@@ -1,0 +1,516 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<link rel="stylesheet" href="stylesheet.css" type="text/css"/>
+	</head>
+<body>
+<div id="container">
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div>
+<div id="main">
+	<div id="navigation">
+		<h2>Modules</h2>
+			<ul><li>
+				<a href="index.html">index</a>
+			</li></ul>
+		<ul>
+					<li><a href="coroutine.html">coroutine</a></li>
+					<li><a href="debug.html">debug</a></li>
+					<li><a href="global.html">global</a></li>
+					<li><a href="io.html">io</a></li>
+					<li><a href="math.html">math</a></li>
+					<li>os</li>
+					<li><a href="package.html">package</a></li>
+					<li><a href="string.html">string</a></li>
+					<li><a href="table.html">table</a></li>
+		</ul>
+	</div>
+	<div id="content">
+   <h1>Module <code>os</code></h1>
+   
+<p>Operating System Facilities.</p>
+
+   
+<p>This library is implemented through table os. </p>
+
+	<h2><a id="#(os)" >Type <code>os</code></a></h2>
+		<table class="function_list">
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(os).clock">os.clock()</a></td>
+		<td class="summary">
+<p>Returns an approximation of the amount in seconds of CPU time used by
+the program.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(os).date">os.date(format, time)</a></td>
+		<td class="summary">
+<p>Returns a string or a table containing date and time, formatted according
+to the given string <code>format</code>.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(os).difftime">os.difftime(t2, t1)</a></td>
+		<td class="summary">
+<p>Returns the number of seconds from time <code>t1</code> to time <code>t2</code>.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(os).execute">os.execute(command)</a></td>
+		<td class="summary">
+<p>This function is equivalent to the C function <code>system</code>.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(os).exit">os.exit(code)</a></td>
+		<td class="summary">
+<p>Calls the C function <code>exit</code>, with an optional <code>code</code>, to terminate the
+host program.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(os).getenv">os.getenv(varname)</a></td>
+		<td class="summary">
+<p>Returns the value of the process environment variable <code>varname</code>, or
+nil if the variable is not defined.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(os).remove">os.remove(filename)</a></td>
+		<td class="summary">
+<p>Deletes the file or directory with the given name.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(os).rename">os.rename(oldname, newname)</a></td>
+		<td class="summary">
+<p>Renames file or directory named <code>oldname</code> to <code>newname</code>.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(os).setlocale">os.setlocale(locale, category)</a></td>
+		<td class="summary">
+<p>Sets the current locale of the program.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(os).time">os.time(table)</a></td>
+		<td class="summary">
+<p>Returns the current time when called without arguments, or a time
+representing the date and time specified by the given table.</p>
+</td>
+		</tr>
+		<tr>
+		<td class="name" nowrap="nowrap"><a href="##(os).tmpname">os.tmpname()</a></td>
+		<td class="summary">
+<p>Returns a string with a file name that can be used for a temporary
+file.</p>
+</td>
+		</tr>
+	</table>
+
+	<h2><a id="#(os)" >Type <code>os</code></a></h2>
+		<h3>Field(s)</h3>
+		<dl class="function">
+<dt>
+<a id="#(os).clock" >
+<strong>os.clock()</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Returns an approximation of the amount in seconds of CPU time used by
+the program.</p>
+
+		<h3>Return value</h3>
+				
+<p><em>#number:</em>
+the amount in seconds of CPU time used by
+the program.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(os).date" >
+<strong>os.date(format, time)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Returns a string or a table containing date and time, formatted according
+to the given string <code>format</code>.</p>
+
+	
+
+<p>If the <code>time</code> argument is present, this is the time to be formatted
+(see the <code>os.time</code> function for a description of this value). Otherwise,
+<code>date</code> formats the current time.</p>
+
+<p>If <code>format</code> starts with '<code>!</code>', then the date is formatted in Coordinated
+Universal Time. After this optional character, if <code>format</code> is the string
+"<code>*t</code>", then <code>date</code> returns a table with the following fields:</p>
+
+<ul>
+    <li><code>year</code> (four digits)</li>
+    <li><code>month</code> (1--12)</li>
+    <li><code>day</code> (1--31)</li>
+    <li><code>hour</code> (0--23)</li>
+    <li><code>min</code> (0--59)</li>
+    <li><code>sec</code> (0--61)</li>
+    <li><code>wday</code> (weekday, Sunday is 1)</li>
+    <li><code>yday</code> (day of the year)</li>
+    <li><code>isdst</code> (daylight saving flag, a boolean).</li>
+</ul>
+
+<p>If <code>format</code> is not "<code>*t</code>", then <code>date</code> returns the date as a string,
+formatted according to the same rules as the C function <code>strftime</code>.
+When called without arguments, <code>date</code> returns a reasonable date and time
+representation that depends on the host system and on the current locale
+(that is, <code>os.date()</code> is equivalent to <code>os.date("%c")</code>).</p>
+
+		<h3>Parameters</h3>
+		<ul>
+				<li>
+				
+<p><code><em>#string format </em></code>: 
+format of date. (optional)</p>
+
+				</li>
+				<li>
+				
+<p><code><em>#number time </em></code>: 
+time to format. (default value is current time) </p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+<p><em>#string:</em>
+a formatted string representation of <code>time</code>. </p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(os).difftime" >
+<strong>os.difftime(t2, t1)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Returns the number of seconds from time <code>t1</code> to time <code>t2</code>.</p>
+
+	
+<p>In POSIX,
+Windows, and some other systems, this value is exactly <code>t2</code><em>-</em><code>t1</code>.</p>
+
+		<h3>Parameters</h3>
+		<ul>
+				<li>
+				
+<p><code><em>#number t2 </em></code>: </p>
+
+				</li>
+				<li>
+				
+<p><code><em>#number t1 </em></code>: </p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+<p><em>#number:</em>
+the number of seconds from time <code>t1</code> to time <code>t2</code>.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(os).execute" >
+<strong>os.execute(command)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>This function is equivalent to the C function <code>system</code>.</p>
+
+	
+<p>It passes
+<code>command</code> to be executed by an operating system shell. It returns a status
+code, which is system-dependent. If <code>command</code> is absent, then it returns
+nonzero if a shell is available and zero otherwise.</p>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em>#string command </em></code>: 
+command to be executed.</p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+
+<p>A status code which is system-dependent.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(os).exit" >
+<strong>os.exit(code)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Calls the C function <code>exit</code>, with an optional <code>code</code>, to terminate the
+host program.</p>
+
+	
+<p>The default value for <code>code</code> is the success code.</p>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em>#number code </em></code>: 
+an exit code. (default is the success code)</p>
+
+
+				</li>
+		</ul>
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(os).getenv" >
+<strong>os.getenv(varname)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Returns the value of the process environment variable <code>varname</code>, or
+nil if the variable is not defined.</p>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em>#string varname </em></code>: 
+an environment variable name.  </p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+
+<p>The value of the process environment variable <code>varname</code>, or
+nil if the variable is not defined.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(os).remove" >
+<strong>os.remove(filename)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Deletes the file or directory with the given name.</p>
+
+	
+<p>Directories must be
+empty to be removed. If this function fails, it returns nil, plus a string
+describing the error.</p>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em> filename </em></code>: 
+the path to the file or directory to delete.</p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+<p><em>#nil, #string:</em>
+an error message if it failed.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(os).rename" >
+<strong>os.rename(oldname, newname)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Renames file or directory named <code>oldname</code> to <code>newname</code>.</p>
+
+	
+<p>If this function
+fails, it returns nil, plus a string describing the error.</p>
+
+		<h3>Parameters</h3>
+		<ul>
+				<li>
+				
+<p><code><em> oldname </em></code>: 
+the path to the file or directory to rename.</p>
+
+				</li>
+				<li>
+				
+<p><code><em> newname </em></code>: 
+the new path.</p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+<p><em>#nil, #string:</em>
+an error message if it failed.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(os).setlocale" >
+<strong>os.setlocale(locale, category)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Sets the current locale of the program.</p>
+
+	
+<p><code>locale</code> is a string specifying
+a locale; <code>category</code> is an optional string describing which category to
+change: <code>"all"</code>, <code>"collate"</code>, <code>"ctype"</code>, <code>"monetary"</code>, <code>"numeric"</code>, or
+<code>"time"</code>; the default category is <code>"all"</code>. The function returns the name
+of the new locale, or nil if the request cannot be honored.</p>
+
+<p>If <code>locale</code> is the empty string, the current locale is set to an
+implementation-defined native locale. If <code>locale</code> is the string "<code>C</code>",
+the current locale is set to the standard C locale.</p>
+
+<p>When called with nil as the first argument, this function only returns
+the name of the current locale for the given category.</p>
+
+		<h3>Parameters</h3>
+		<ul>
+				<li>
+				
+<p><code><em>#string locale </em></code>: 
+a string specifying a locale.</p>
+
+				</li>
+				<li>
+				
+<p><code><em>#string category </em></code>: 
+<code>"all"</code>, <code>"collate"</code>, <code>"ctype"</code>, <code>"monetary"</code>, <code>"numeric"</code>, or
+<code>"time"</code>; the default category is <code>"all"</code>.</p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+<p><em>#string:</em>
+the current locale.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(os).time" >
+<strong>os.time(table)</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Returns the current time when called without arguments, or a time
+representing the date and time specified by the given table.</p>
+
+	
+<p>This table
+must have fields <code>year</code>, <code>month</code>, and <code>day</code>, and may have fields <code>hour</code>,
+<code>min</code>, <code>sec</code>, and <code>isdst</code> (for a description of these fields, see the
+<code>os.date</code> function).</p>
+
+<p>The returned value is a number, whose meaning depends on your system. In
+POSIX, Windows, and some other systems, this number counts the number
+of seconds since some given start time (the "epoch"). In other systems,
+the meaning is not specified, and the number returned by <code>time</code> can be
+used only as an argument to <code>date</code> and <code>difftime</code>.</p>
+
+		<h3>Parameter</h3>
+		<ul>
+				<li>
+				
+<p><code><em>#table table </em></code>: 
+a table which describes a date.</p>
+
+				</li>
+		</ul>
+		<h3>Return value</h3>
+				
+<p><em>#number:</em>
+a number meaning a date.</p>
+
+
+</dd>
+</dl>
+		<dl class="function">
+<dt>
+<a id="#(os).tmpname" >
+<strong>os.tmpname()</strong>
+</a>
+</dt>
+<dd>
+	
+<p>Returns a string with a file name that can be used for a temporary
+file.</p>
+
+	
+<p>The file must be explicitly opened before its use and explicitly
+removed when no longer needed.</p>
+
+<p>On some systems (POSIX), this function also creates a file with that
+name, to avoid security risks. (Someone else might create the file with
+wrong permissions in the time between getting the name and creating the
+file.) You still have to open the file to use it and to remove it (even
+if you do not use it).</p>
+
+<p>When possible, you may prefer to use <code>io.tmpfile</code>, which automatically
+removes the file when the program ends.</p>
+
+		<h3>Return value</h3>
+				
+<p><em>#string:</em>
+a string with a file name that can be used for a temporary file.</p>
+
+
+</dd>
+</dl>
+
+</div>
+
+</div>
+</body>
+</html>
