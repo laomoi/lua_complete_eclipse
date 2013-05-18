@@ -10,9 +10,9 @@
 -----------------------
 -- @function [parent=#CCShapeNodeExtend] setColor
 -- @param  r
--- @param   g
--- @param   b
--- @param   a
+-- @param  g
+-- @param  b
+-- @param  a
 
 -----------------------
 return nil

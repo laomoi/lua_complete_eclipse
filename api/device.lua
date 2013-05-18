@@ -43,6 +43,9 @@
 -- @field [parent=#device] writeablePath
 
 -----------------------
+-- @field [parent=#device] documentsPath
+
+-----------------------
 -- @field [parent=#device] platform
 
 -----------------------
@@ -58,6 +61,9 @@
 -- @field [parent=#device] writeablePath
 
 -----------------------
+-- @field [parent=#device] documentsPath
+
+-----------------------
 -- @function [parent=#device] showActivityIndicator
 
 -----------------------
@@ -66,9 +72,9 @@
 -----------------------
 -- @function [parent=#device] showAlert
 -- @param  title
--- @param   message
--- @param   buttonLabels
--- @param   listener
+-- @param  message
+-- @param  buttonLabels
+-- @param  listener
 
 -----------------------
 -- @function [parent=#device] cancelAlert
@@ -83,8 +89,8 @@
 -----------------------
 -- @function [parent=#device] showInputBox
 -- @param  title
--- @param   message
--- @param   defaultValue
+-- @param  message
+-- @param  defaultValue
 
 -----------------------
 return nil

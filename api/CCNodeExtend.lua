@@ -10,13 +10,13 @@
 -----------------------
 -- @function [parent=#CCNodeExtend] align
 -- @param  anchorPoint
--- @param   x
--- @param   y
+-- @param  x
+-- @param  y
 
 -----------------------
 -- @function [parent=#CCNodeExtend] pixels
 -- @param  x
--- @param   y
+-- @param  y
 
 -----------------------
 -- @function [parent=#CCNodeExtend] removeFromParentAndCleanup
@@ -29,17 +29,17 @@
 -----------------------
 -- @function [parent=#CCNodeExtend] scheduleUpdate
 -- @param  callback
--- @param   priority
+-- @param  priority
 
 -----------------------
 -- @function [parent=#CCNodeExtend] schedule
 -- @param  callback
--- @param   interval
+-- @param  interval
 
 -----------------------
 -- @function [parent=#CCNodeExtend] performWithDelay
 -- @param  callback
--- @param   delay
+-- @param  delay
 
 -----------------------
 -- @function [parent=#CCNodeExtend] removeAction

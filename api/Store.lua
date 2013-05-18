@@ -10,7 +10,7 @@
 -----------------------
 -- @function [parent=#Store] setReceiptVerifyMode
 -- @param  mode
--- @param   isSandbox
+-- @param  isSandbox
 
 -----------------------
 -- @function [parent=#Store] getReceiptVerifyServerUrl
@@ -25,7 +25,7 @@
 -----------------------
 -- @function [parent=#Store] loadProducts
 -- @param  productsId
--- @param   listener
+-- @param  listener
 
 -----------------------
 -- @function [parent=#Store] cancelLoadProducts

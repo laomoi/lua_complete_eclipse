@@ -1,0 +1,4 @@
+-- @module CCMenuItemAtlasFont
+
+-----------------------
+return nil

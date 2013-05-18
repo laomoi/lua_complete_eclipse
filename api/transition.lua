@@ -3,38 +3,43 @@
 -----------------------
 -- @function [parent=#transition] execute
 -- @param  target
--- @param   action
--- @param   args
+-- @param  action
+-- @param  args
+
+-----------------------
+-- @function [parent=#transition] rotateTo
+-- @param  target
+-- @param  args
 
 -----------------------
 -- @function [parent=#transition] moveTo
 -- @param  target
--- @param   args
+-- @param  args
 
 -----------------------
 -- @function [parent=#transition] moveBy
 -- @param  target
--- @param   args
+-- @param  args
 
 -----------------------
 -- @function [parent=#transition] fadeIn
 -- @param  target
--- @param   args
+-- @param  args
 
 -----------------------
 -- @function [parent=#transition] fadeOut
 -- @param  target
--- @param   args
+-- @param  args
 
 -----------------------
 -- @function [parent=#transition] fadeTo
 -- @param  target
--- @param   args
+-- @param  args
 
 -----------------------
 -- @function [parent=#transition] scaleTo
 -- @param  target
--- @param   args
+-- @param  args
 
 -----------------------
 -- @function [parent=#transition] sequence
@@ -43,17 +48,17 @@
 -----------------------
 -- @function [parent=#transition] playAnimationOnce
 -- @param  target
--- @param   animation
--- @param   removeWhenFinished
--- @param   onComplete
--- @param   delay
+-- @param  animation
+-- @param  removeWhenFinished
+-- @param  onComplete
+-- @param  delay
 
 -----------------------
 -- @function [parent=#transition] playAnimationForever
 -- @param  target
--- @param   animation
--- @param   isRestoreOriginalFrame
--- @param   delay
+-- @param  animation
+-- @param  isRestoreOriginalFrame
+-- @param  delay
 
 -----------------------
 -- @function [parent=#transition] removeAction

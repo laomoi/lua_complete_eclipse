@@ -90,7 +90,7 @@
 -----------------------
 -- @function [parent=#audio] playMusic
 -- @param  filename
--- @param   isLoop
+-- @param  isLoop
 
 -----------------------
 -- @function [parent=#audio] stopMusic
@@ -114,7 +114,7 @@
 -----------------------
 -- @function [parent=#audio] playSound
 -- @param  filename
--- @param   isLoop
+-- @param  isLoop
 
 -----------------------
 -- @function [parent=#audio] pauseSound

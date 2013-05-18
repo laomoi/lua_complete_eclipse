@@ -1,0 +1,4 @@
+-- @module CCActionInstant
+
+-----------------------
+return nil

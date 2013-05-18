@@ -12,8 +12,8 @@
 -----------------------
 -- @function [parent=#GameState] init
 -- @param  eventListener_
--- @param   stateFilename_
--- @param   secretKey_
+-- @param  stateFilename_
+-- @param  secretKey_
 
 -----------------------
 -- @function [parent=#GameState] load

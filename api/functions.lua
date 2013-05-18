@@ -1,4 +1,0 @@
--- @module functions
-
------------------------
-return nil

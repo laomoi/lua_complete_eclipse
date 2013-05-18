@@ -1,4 +1,0 @@
--- @module simplejson
-
------------------------
-return nil

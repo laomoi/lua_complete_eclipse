@@ -10,9 +10,9 @@
 -----------------------
 -- @function [parent=#CCLayerExtend] addTouchEventListener
 -- @param  listener
--- @param   isMultiTouches
--- @param   priority
--- @param   swallowsTouches
+-- @param  isMultiTouches
+-- @param  priority
+-- @param  swallowsTouches
 
 -----------------------
 -- @function [parent=#CCLayerExtend] removeTouchEventListener

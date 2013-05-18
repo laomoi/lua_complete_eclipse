@@ -13,7 +13,7 @@
 -----------------------
 -- @function [parent=#Localize] query
 -- @param  key
--- @param   default
+-- @param  default
 
 -----------------------
 -- @function [parent=#Localize] filename

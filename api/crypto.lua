@@ -3,12 +3,22 @@
 -----------------------
 -- @function [parent=#crypto] encryptAES256
 -- @param  plaintext
--- @param   key
+-- @param  key
 
 -----------------------
 -- @function [parent=#crypto] decryptAES256
 -- @param  ciphertext
--- @param   key
+-- @param  key
+
+-----------------------
+-- @function [parent=#crypto] encryptXXTEA
+-- @param  plaintext
+-- @param  key
+
+-----------------------
+-- @function [parent=#crypto] decryptXXTEA
+-- @param  ciphertext
+-- @param  key
 
 -----------------------
 -- @function [parent=#crypto] encodeBase64
@@ -21,7 +31,7 @@
 -----------------------
 -- @function [parent=#crypto] md5
 -- @param  input
--- @param   isRawOutput
+-- @param  isRawOutput
 
 -----------------------
 return nil

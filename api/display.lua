@@ -165,7 +165,7 @@
 -----------------------
 -- @function [parent=#display] setTexturePixelFormat
 -- @param  filename
--- @param   format
+-- @param  format
 
 -----------------------
 -- @function [parent=#display] newScene
@@ -174,16 +174,16 @@
 -----------------------
 -- @function [parent=#display] wrapSceneWithTransition
 -- @param  scene
--- @param   transitionType
--- @param   time
--- @param   more
+-- @param  transitionType
+-- @param  time
+-- @param  more
 
 -----------------------
 -- @function [parent=#display] replaceScene
 -- @param  newScene
--- @param   transitionType
--- @param   time
--- @param   more
+-- @param  transitionType
+-- @param  time
+-- @param  more
 
 -----------------------
 -- @function [parent=#display] getRunningScene
@@ -207,8 +207,8 @@
 -----------------------
 -- @function [parent=#display] newSprite
 -- @param  filename
--- @param   x
--- @param   y
+-- @param  x
+-- @param  y
 
 -----------------------
 -- @function [parent=#display] newBackgroundSprite
@@ -225,34 +225,34 @@
 -----------------------
 -- @function [parent=#display] newRect
 -- @param  width
--- @param   height
+-- @param  height
 
 -----------------------
 -- @function [parent=#display] newPolygon
 -- @param  points
--- @param   scale
+-- @param  scale
 
 -----------------------
 -- @function [parent=#display] align
 -- @param  target
--- @param   anchorPoint
--- @param   x
--- @param   y
+-- @param  anchorPoint
+-- @param  x
+-- @param  y
 
 -----------------------
 -- @function [parent=#display] pixels
 -- @param  x
--- @param   y
+-- @param  y
 
 -----------------------
 -- @function [parent=#display] addSpriteFramesWithFile
 -- @param  plistFilename
--- @param   image
+-- @param  image
 
 -----------------------
 -- @function [parent=#display] removeSpriteFramesWithFile
 -- @param  plistFilename
--- @param   imageName
+-- @param  imageName
 
 -----------------------
 -- @function [parent=#display] removeSpriteFrameByImageName
@@ -261,7 +261,7 @@
 -----------------------
 -- @function [parent=#display] newBatchNode
 -- @param  image
--- @param   capacity
+-- @param  capacity
 
 -----------------------
 -- @function [parent=#display] newSpriteFrame
@@ -270,20 +270,20 @@
 -----------------------
 -- @function [parent=#display] newSpriteWithFrame
 -- @param  frame
--- @param   x
--- @param   y
+-- @param  x
+-- @param  y
 
 -----------------------
 -- @function [parent=#display] newFrames
 -- @param  pattern
--- @param   begin
--- @param   length
--- @param   isReversed
+-- @param  begin
+-- @param  length
+-- @param  isReversed
 
 -----------------------
 -- @function [parent=#display] newAnimation
 -- @param  frames
--- @param   time
+-- @param  time
 
 -----------------------
 -- @function [parent=#display] newAnimate

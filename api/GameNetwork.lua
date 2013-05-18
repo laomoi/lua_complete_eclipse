@@ -3,17 +3,17 @@
 -----------------------
 -- @function [parent=#GameNetwork] init
 -- @param  providerName
--- @param   params
+-- @param  params
 
 -----------------------
 -- @function [parent=#GameNetwork] request
 -- @param  command
--- @param   ...
+-- @param  ...
 
 -----------------------
 -- @function [parent=#GameNetwork] show
 -- @param  command
--- @param   ...
+-- @param  ...
 
 -----------------------
 -- @function [parent=#GameNetwork] exit

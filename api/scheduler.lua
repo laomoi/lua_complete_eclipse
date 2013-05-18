@@ -3,13 +3,13 @@
 -----------------------
 -- @function [parent=#scheduler] scheduleUpdateGlobal
 -- @param  listener
--- @param   isPaused
+-- @param  isPaused
 
 -----------------------
 -- @function [parent=#scheduler] scheduleGlobal
 -- @param  listener
--- @param   interval
--- @param   isPaused
+-- @param  interval
+-- @param  isPaused
 
 -----------------------
 -- @function [parent=#scheduler] unscheduleGlobal
@@ -18,7 +18,7 @@
 -----------------------
 -- @function [parent=#scheduler] performWithDelayGlobal
 -- @param  listener
--- @param   time
+-- @param  time
 
 -----------------------
 return nil

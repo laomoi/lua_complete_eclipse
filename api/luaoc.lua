@@ -3,8 +3,8 @@
 -----------------------
 -- @function [parent=#luaoc] callStaticMethod
 -- @param  className
--- @param   methodName
--- @param   args
+-- @param  methodName
+-- @param  args
 
 -----------------------
 return nil

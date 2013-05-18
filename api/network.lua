@@ -16,8 +16,8 @@
 -----------------------
 -- @function [parent=#network] createHTTPRequest
 -- @param  callback
--- @param   url
--- @param   method
+-- @param  url
+-- @param  method
 
 -----------------------
 return nil
