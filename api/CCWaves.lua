@@ -2,18 +2,22 @@
 
 -----------------------
 -- @function [parent=#CCWaves] getAmplitude
+-- @param  self
 -- @param  void
 
 -----------------------
 -- @function [parent=#CCWaves] setAmplitude
+-- @param  self
 -- @param  fAmplitude
 
 -----------------------
 -- @function [parent=#CCWaves] getAmplitudeRate
+-- @param  self
 -- @param  void
 
 -----------------------
 -- @function [parent=#CCWaves] setAmplitudeRate
+-- @param  self
 -- @param  fAmplitudeRate
 
 -----------------------

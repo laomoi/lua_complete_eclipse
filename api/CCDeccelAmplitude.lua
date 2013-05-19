@@ -2,10 +2,12 @@
 
 -----------------------
 -- @function [parent=#CCDeccelAmplitude] getRate
+-- @param  self
 -- @param  void
 
 -----------------------
 -- @function [parent=#CCDeccelAmplitude] setRate
+-- @param  self
 -- @param  fRate
 
 -----------------------

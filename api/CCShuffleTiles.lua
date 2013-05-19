@@ -2,17 +2,14 @@
 
 -----------------------
 -- @function [parent=#CCShuffleTiles] shuffle
+-- @param  self
 -- @param  pArray
 -- @param  nLen
 
 -----------------------
 -- @function [parent=#CCShuffleTiles] getDelta
+-- @param  self
 -- @param  pos
-
------------------------
--- @function [parent=#CCShuffleTiles] placeTile
--- @param  pos
--- @param  t
 
 -----------------------
 -- @function [parent=#CCShuffleTiles] create

@@ -2,6 +2,7 @@
 
 -----------------------
 -- @function [parent=#CCOrbitCamera] sphericalRadius
+-- @param  self
 -- @param  r
 -- @param  zenith
 -- @param  azimuth

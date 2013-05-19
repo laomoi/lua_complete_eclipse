@@ -1,22 +1,18 @@
 -- @module CCTileMapAtlas
 
 -----------------------
--- @function [parent=#CCTileMapAtlas] getTGAInfo
-
------------------------
--- @function [parent=#CCTileMapAtlas] setTGAInfo
--- @param  val
-
------------------------
 -- @function [parent=#CCTileMapAtlas] setTile
+-- @param  self
 -- @param  tile
 -- @param  position
 
 -----------------------
 -- @function [parent=#CCTileMapAtlas] releaseMap
+-- @param  self
 
 -----------------------
 -- @function [parent=#CCTileMapAtlas] tileAt
+-- @param  self
 -- @param  pos
 
 -----------------------

@@ -2,6 +2,7 @@
 
 -----------------------
 -- @function [parent=#instead] ccBezierConfig
+-- @param  self
 -- @param  void
 
 -----------------------

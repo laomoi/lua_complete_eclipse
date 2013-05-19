@@ -2,10 +2,12 @@
 
 -----------------------
 -- @function [parent=#CCAnimate] getAnimation
+-- @param  self
 -- @param  void
 
 -----------------------
 -- @function [parent=#CCAnimate] setAnimation
+-- @param  self
 -- @param  pAnimation
 
 -----------------------

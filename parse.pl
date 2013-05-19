@@ -106,10 +106,15 @@ sub parse {
             #functions
             my @functions = ();
             while ($c =~ m{function\s+$short(\.|\:)(\w+)\((.*?)\)}g) {
+                my $is_static = $1 eq '.' ? 1:0;
+                
                 my $name = $2;
                 my $params = $3;
                 my @params = split ",", $params;
                 @params = map {$_ =~ s{\s}{}g; $_} @params;
+                if (!$is_static){
+                    unshift @params, 'self';
+                }
                 push @functions, {name=> $name, params=> \@params};
             }
             $rh_parsed->{$short} = {fields => \@fields, functions => \@functions};
@@ -172,14 +177,23 @@ sub parse_tolua {
         close F;
         
         while($c =~ m{class\s+(\w+).*?\{(.*?)\}}gs){
+           
             my $class_name = $1;
             my $body = $2;
             my @functions = ();
-            while($body =~ m{(\w+)\((.*?)\)}g){
-                my $func_name = $1;
-                my $func_params = $2;
+          
+            while($body =~ m{\s*(.*?)\s+(\w+)\((.*?)\)}g){
+                my $prefix = $1;
+                if ($prefix =~ m{\/\/}){
+                    next;
+                }
+                my $func_name = $2;
+                my $func_params = $3;
                 my @params = split ",", $func_params;
                 @params = map {$_ =~ m{(\w+)\s*$}; $1} @params;
+                if ($prefix !~ m{\s*static\s*}){
+                    unshift @params, 'self';
+                }
                 push @functions, {name=> $func_name, params=> \@params};
             }
             

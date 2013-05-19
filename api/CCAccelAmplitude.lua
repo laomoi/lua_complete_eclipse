@@ -2,10 +2,12 @@
 
 -----------------------
 -- @function [parent=#CCAccelAmplitude] getRate
+-- @param  self
 -- @param  void
 
 -----------------------
 -- @function [parent=#CCAccelAmplitude] setRate
+-- @param  self
 -- @param  fRate
 
 -----------------------

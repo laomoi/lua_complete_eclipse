@@ -2,10 +2,12 @@
 
 -----------------------
 -- @function [parent=#CCEaseElastic] getPeriod
+-- @param  self
 -- @param  void
 
 -----------------------
 -- @function [parent=#CCEaseElastic] setPeriod
+-- @param  self
 -- @param  fPeriod
 
 -----------------------

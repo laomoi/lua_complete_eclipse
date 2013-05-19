@@ -2,18 +2,22 @@
 
 -----------------------
 -- @function [parent=#CCLens3D] getLensEffect
+-- @param  self
 -- @param  void
 
 -----------------------
 -- @function [parent=#CCLens3D] setLensEffect
+-- @param  self
 -- @param  fLensEffect
 
 -----------------------
 -- @function [parent=#CCLens3D] getPosition
+-- @param  self
 -- @param  void
 
 -----------------------
 -- @function [parent=#CCLens3D] setPosition
+-- @param  self
 -- @param  position
 
 -----------------------

@@ -2,9 +2,11 @@
 
 -----------------------
 -- @function [parent=#CCCardinalSplineTo] getPoints
+-- @param  self
 
 -----------------------
 -- @function [parent=#CCCardinalSplineTo] setPoints
+-- @param  self
 -- @param  points
 
 -----------------------

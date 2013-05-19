@@ -2,10 +2,12 @@
 
 -----------------------
 -- @function [parent=#CCSpeed] getSpeed
+-- @param  self
 -- @param  void
 
 -----------------------
 -- @function [parent=#CCSpeed] setSpeed
+-- @param  self
 -- @param  fSpeed
 
 -----------------------

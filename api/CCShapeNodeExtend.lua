@@ -9,6 +9,7 @@
 
 -----------------------
 -- @function [parent=#CCShapeNodeExtend] setColor
+-- @param  self
 -- @param  r
 -- @param  g
 -- @param  b

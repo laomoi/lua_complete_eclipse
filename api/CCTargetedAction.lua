@@ -2,10 +2,12 @@
 
 -----------------------
 -- @function [parent=#CCTargetedAction] getForcedTarget
+-- @param  self
 -- @param  void
 
 -----------------------
 -- @function [parent=#CCTargetedAction] setForcedTarget
+-- @param  self
 -- @param  target
 
 -----------------------

@@ -9,6 +9,7 @@
 
 -----------------------
 -- @function [parent=#CCSceneExtend] addAutoCleanImage
+-- @param  self
 -- @param  imageName
 
 -----------------------

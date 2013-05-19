@@ -2,10 +2,12 @@
 
 -----------------------
 -- @function [parent=#CCFollow] isBoundarySet
+-- @param  self
 -- @param  void
 
 -----------------------
 -- @function [parent=#CCFollow] setBoudarySet
+-- @param  self
 -- @param  bValue
 
 -----------------------

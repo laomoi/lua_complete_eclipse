@@ -9,6 +9,7 @@
 
 -----------------------
 -- @function [parent=#CCLayerExtend] addTouchEventListener
+-- @param  self
 -- @param  listener
 -- @param  isMultiTouches
 -- @param  priority
@@ -16,20 +17,25 @@
 
 -----------------------
 -- @function [parent=#CCLayerExtend] removeTouchEventListener
+-- @param  self
 
 -----------------------
 -- @function [parent=#CCLayerExtend] addKeypadEventListener
+-- @param  self
 -- @param  listener
 
 -----------------------
 -- @function [parent=#CCLayerExtend] removeKeypadEventListener
+-- @param  self
 
 -----------------------
 -- @function [parent=#CCLayerExtend] addScriptAccelerateHandler
+-- @param  self
 -- @param  listener
 
 -----------------------
 -- @function [parent=#CCLayerExtend] removeScriptAccelerateHandler
+-- @param  self
 
 -----------------------
 return nil

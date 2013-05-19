@@ -5,12 +5,14 @@
 
 -----------------------
 -- @function [parent=#CCDrawNode] drawDot
+-- @param  self
 -- @param  pos
 -- @param  radius
 -- @param  color
 
 -----------------------
 -- @function [parent=#CCDrawNode] drawSegment
+-- @param  self
 -- @param  from
 -- @param  to
 -- @param  radius
@@ -18,6 +20,7 @@
 
 -----------------------
 -- @function [parent=#CCDrawNode] drawPolygon
+-- @param  self
 -- @param  verts
 -- @param  fillColor
 -- @param  borderWidth
@@ -25,12 +28,15 @@
 
 -----------------------
 -- @function [parent=#CCDrawNode] clear
+-- @param  self
 
 -----------------------
 -- @function [parent=#CCDrawNode] getBlendFunc
+-- @param  self
 
 -----------------------
 -- @function [parent=#CCDrawNode] setBlendFunc
+-- @param  self
 -- @param  blendFunc
 
 -----------------------

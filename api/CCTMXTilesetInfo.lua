@@ -2,6 +2,7 @@
 
 -----------------------
 -- @function [parent=#CCTMXTilesetInfo] rectForGID
+-- @param  self
 -- @param  gid
 
 -----------------------

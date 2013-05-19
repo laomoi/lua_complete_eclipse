@@ -2,34 +2,42 @@
 
 -----------------------
 -- @function [parent=#CCScale9Sprite] getOriginalSize
+-- @param  self
 -- @param  void
 
 -----------------------
 -- @function [parent=#CCScale9Sprite] getPreferredSize
+-- @param  self
 -- @param  void
 
 -----------------------
 -- @function [parent=#CCScale9Sprite] setPreferredSize
+-- @param  self
 -- @param  size
 
 -----------------------
 -- @function [parent=#CCScale9Sprite] getCapInsets
+-- @param  self
 -- @param  void
 
 -----------------------
 -- @function [parent=#CCScale9Sprite] setCapInsets
+-- @param  self
 -- @param  capInsets
 
 -----------------------
 -- @function [parent=#CCScale9Sprite] getOpacity
+-- @param  self
 -- @param  void
 
 -----------------------
 -- @function [parent=#CCScale9Sprite] setOpacity
+-- @param  self
 -- @param  opacity
 
 -----------------------
 -- @function [parent=#CCScale9Sprite] resizableSpriteWithCapInsets
+-- @param  self
 -- @param  capInsets
 
 -----------------------
@@ -37,6 +45,7 @@
 
 -----------------------
 -- @function [parent=#CCScale9Sprite] setSpriteFrame
+-- @param  self
 -- @param  spriteFrame
 
 -----------------------

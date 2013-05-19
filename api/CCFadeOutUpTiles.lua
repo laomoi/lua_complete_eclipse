@@ -2,6 +2,7 @@
 
 -----------------------
 -- @function [parent=#CCFadeOutUpTiles] transformTile
+-- @param  self
 -- @param  pos
 -- @param  distance
 

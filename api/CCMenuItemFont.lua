@@ -16,17 +16,21 @@
 
 -----------------------
 -- @function [parent=#CCMenuItemFont] setFontSizeObj
+-- @param  self
 -- @param  s
 
 -----------------------
 -- @function [parent=#CCMenuItemFont] fontSizeObj
+-- @param  self
 
 -----------------------
 -- @function [parent=#CCMenuItemFont] setFontNameObj
+-- @param  self
 -- @param  name
 
 -----------------------
 -- @function [parent=#CCMenuItemFont] fontNameObj
+-- @param  self
 
 -----------------------
 -- @function [parent=#CCMenuItemFont] create
